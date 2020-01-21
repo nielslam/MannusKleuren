@@ -1,0 +1,10 @@
+$kleurtjes: #1a47b3, #f35c89, #ffc847, #1a1d66;
+$kleurtjes-match: #f35c89, #1a47b3, #1a1d66, #ffc847;
+
+@each $kleurtje in $kleurtjes {
+    $i: index($kleurtjes, $kleurtje);
+    .kleurtje-#{$i} { 
+        background-color: $kleurtje;
+        color: nth($kleurtjes-match, $i);
+    }
+}
